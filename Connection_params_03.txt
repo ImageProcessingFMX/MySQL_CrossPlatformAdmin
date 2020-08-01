@@ -1,0 +1,6 @@
+DriverID=MySQL
+Server=127.0.0.1
+Port=3306
+Database=testdb
+User_Name=testuser
+Password=1234
