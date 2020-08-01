@@ -1,0 +1,262 @@
+object EvalMySQLForm: TEvalMySQLForm
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 644
+  ClientWidth = 845
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object pnl1: TPanel
+    Align = Bottom
+    Position.Y = 604.000000000000000000
+    Size.Width = 845.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lbl_statusbar: TLabel
+      Align = Client
+      Size.Width = 845.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lbl_statusbar'
+      TabOrder = 0
+    end
+  end
+  object pnl2: TPanel
+    Align = Client
+    Size.Width = 845.000000000000000000
+    Size.Height = 531.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object tbcMySQL: TTabControl
+      Align = Client
+      Size.Width = 845.000000000000000000
+      Size.Height = 531.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 2
+      TabOrder = 0
+      TabPosition = PlatformDefault
+      Sizes = (
+        845s
+        505s
+        845s
+        505s
+        845s
+        505s)
+      object tbtm_CONNECTDATABASE: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 160.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tbtm_CONNECTDATABASE'
+        ExplicitSize.cx = 160.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object btn_connectDB: TButton
+          Align = Bottom
+          Position.Y = 456.000000000000000000
+          Size.Width = 845.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Connect MYSQL DB'
+          OnClick = btn_connectDBClick
+        end
+        object mmo_connection_params: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Align = Client
+          Size.Width = 845.000000000000000000
+          Size.Height = 415.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Viewport.Width = 841.000000000000000000
+          Viewport.Height = 411.000000000000000000
+        end
+        object btn_LoadConnectionSettings: TButton
+          Align = Top
+          Size.Width = 845.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Open MYSQL Connection Settings'
+          OnClick = btn_LoadConnectionSettingsClick
+        end
+      end
+      object tbtm_EVALDATABASE: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 132.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tbtm_EVALDATABASE'
+        ExplicitSize.cx = 132.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object lst_tablenames: TListBox
+          Position.X = 32.000000000000000000
+          Position.Y = 184.000000000000000000
+          Size.Width = 225.000000000000000000
+          Size.Height = 265.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnDblClick = lst_tablenamesDblClick
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Viewport.Width = 221.000000000000000000
+          Viewport.Height = 261.000000000000000000
+        end
+        object edt_database: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Text = 'testdb03'
+          Position.X = 32.000000000000000000
+          Position.Y = 46.000000000000000000
+          Size.Width = 225.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object btn_gettablenames: TButton
+          Position.X = 32.000000000000000000
+          Position.Y = 80.000000000000000000
+          Size.Width = 225.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'get table names'
+          OnClick = btn_gettablenamesClick
+        end
+        object edt_tablename: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          Position.X = 280.000000000000000000
+          Position.Y = 46.000000000000000000
+          Size.Width = 225.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object btn_fieldnames: TButton
+          Position.X = 280.000000000000000000
+          Position.Y = 88.000000000000000000
+          Size.Width = 225.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'btn_fieldnames'
+          OnClick = btn_fieldnamesClick
+        end
+        object lbl1: TLabel
+          Position.X = 88.000000000000000000
+          Position.Y = 142.000000000000000000
+          Text = 'table list'
+          TabOrder = 5
+        end
+        object lst_fieldnames: TListBox
+          Position.X = 280.000000000000000000
+          Position.Y = 182.000000000000000000
+          Size.Width = 233.000000000000000000
+          Size.Height = 267.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Viewport.Width = 229.000000000000000000
+          Viewport.Height = 263.000000000000000000
+        end
+      end
+      object tbtm_ExecuteSQL: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 113.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tbtm_ExecuteSQL'
+        object btn_loadSQLScript: TButton
+          Align = Top
+          Size.Width = 845.000000000000000000
+          Size.Height = 43.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'btn_loadSQLScript'
+          OnClick = btn_loadSQLScriptClick
+        end
+        object btn_ExecuteSQL: TButton
+          Align = Bottom
+          Position.Y = 448.000000000000000000
+          Size.Width = 845.000000000000000000
+          Size.Height = 57.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'btn_ExecuteSQL'
+          OnClick = btn_ExecuteSQLClick
+        end
+        object mmo_sqlScript: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Align = Client
+          Size.Width = 845.000000000000000000
+          Size.Height = 405.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Viewport.Width = 841.000000000000000000
+          Viewport.Height = 401.000000000000000000
+        end
+      end
+    end
+  end
+  object pnl3: TPanel
+    Align = Top
+    Size.Width = 845.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Label1: TLabel
+      Align = Client
+      StyledSettings = []
+      Size.Width = 845.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Segoe UI Symbol'
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claCadetblue
+      Text = 'Connect MYSQL database'
+      TabOrder = 0
+    end
+  end
+  object dlgOpen: TOpenDialog
+    Left = 496
+    Top = 280
+  end
+  object IdSystatUDP1: TIdSystatUDP
+    Left = 376
+    Top = 144
+  end
+  object MYSQLcon: TFDConnection
+    Left = 360
+    Top = 201
+  end
+  object fdphysmysqldrvrlnk1: TFDPhysMySQLDriverLink
+    Left = 200
+    Top = 393
+  end
+end
